@@ -1,0 +1,32 @@
+<ng-container [ngSwitch]="layoutType$ | async">
+  <ng-container *ngSwitchDefault>
+    <div>
+      <app-header></app-header>
+      <main>
+        <ng-container *ngTemplateOutlet="template"></ng-container>
+      </main>
+    </div>
+  </ng-container>
+  <ng-container *ngSwitchCase="breakpoints.Tablet">
+    <main>
+      <ng-container
+        *ngTemplateOutlet="template; context: { mode: 'fluid' }"
+      ></ng-container>
+    </main>
+  </ng-container>
+  <ng-container *ngSwitchCase="breakpoints.Web">
+    <app-header></app-header>
+    <main>
+      <ng-container *ngTemplateOutlet="template"></ng-container>
+    </main>
+    <app-footer></app-footer>
+  </ng-container>
+</ng-container>
+
+<ng-template #template let-mode="mode">
+  <router-outlet name="top"></router-outlet>
+  <app-container [mode]="mode">
+    <router-outlet></router-outlet>
+  </app-container>
+  <router-outlet name="bottom"></router-outlet>
+</ng-template>

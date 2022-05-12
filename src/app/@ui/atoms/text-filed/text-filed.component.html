@@ -1,0 +1,8 @@
+<input
+  #input
+  (blur)="onTouched($event)"
+  (focus)="isFocus = true"
+  (focusout)="isFocus = false"
+  (input)="onInputValueChange($event)"
+  [value]="value"
+/>

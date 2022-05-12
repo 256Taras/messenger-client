@@ -1,0 +1,20 @@
+<div>
+  <form (ngSubmit)="onSubmit()" [formGroup]="form">
+    <div>
+      <label>Username</label>
+      <app-text-filed [formControlName]="fields.Username"></app-text-filed>
+    </div>
+    <div>
+      <label>Email</label>
+      <app-text-filed [formControlName]="fields.Email"></app-text-filed>
+    </div>
+    <div>
+      <label>Password</label>
+      <app-text-filed [formControlName]="fields.Password"></app-text-filed>
+    </div>
+    {{ form.valid }}
+    <div>
+      <app-button type="submit">submit</app-button>
+    </div>
+  </form>
+</div>

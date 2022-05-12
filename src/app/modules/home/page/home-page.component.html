@@ -1,0 +1,17 @@
+<h2>{{ "HOME.HOME_TITLE" | translate }}</h2>
+
+<div class="home-page">
+  <div class="home-langs">
+    <button (click)="setLang('ua')" type="button">RU</button>
+    /
+    <button (click)="setLang('en')" type="button">En</button>
+  </div>
+
+  <div class="home-title">{{ "home.count" | translate }}: {{ counter }}</div>
+
+  <div class="home-actions">
+    <button (click)="add()" type="btn btn-default home-action">
+      {{ "HOME.HOME_TITLE" | translate }}
+    </button>
+  </div>
+</div>
