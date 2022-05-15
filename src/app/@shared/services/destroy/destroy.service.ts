@@ -4,7 +4,7 @@ import { ReplaySubject } from "rxjs";
 /**
  * Observable abstraction over ngOnDestroy to use with takeUntil
  */
-@Injectable()
+@Injectable({ providedIn: "root" })
 export class DestroyService extends ReplaySubject<void> implements OnDestroy {
   public constructor() {
     super(1);
