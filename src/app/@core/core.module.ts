@@ -22,7 +22,7 @@ import { BASE_API_URL } from "@core/config/base-api-url";
     RouterModule.forRoot([], {
       preloadingStrategy: PreloadAllModules,
       anchorScrolling: "enabled",
-      initialNavigation: "enabled",
+      initialNavigation: "enabledNonBlocking",
       scrollPositionRestoration: "enabled"
     }),
     BrowserModule.withServerTransition({ appId: "serverApp" }),

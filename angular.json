@@ -168,6 +168,7 @@
   },
   "defaultProject": "ng-starter-kit",
   "cli": {
-    "defaultCollection": "@angular-eslint/schematics"
+    "defaultCollection": "@angular-eslint/schematics",
+    "analytics": "56abd8c7-f809-46f5-80d5-ed64e497f59c"
   }
 }

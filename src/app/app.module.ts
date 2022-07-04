@@ -5,8 +5,8 @@ import { AuthModule } from "@auth/auth.module";
 
 @NgModule({
   imports: [
-    AuthModule,
     HomeModule,
+    AuthModule,
     /**
      * The not-found page should be the last
      */
